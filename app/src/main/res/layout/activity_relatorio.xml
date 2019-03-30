@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RelatorioActivity">
+
+    <TableRow>
+        <TextView
+
+            android:text="@string/data"
+            android:textSize="30sp"
+            android:textColor="@color/colorText"
+
+            android:layout_marginLeft="20dp"
+            />
+        <TextView
+            android:text="@string/valorRel"
+            android:textSize="30sp"
+            android:textColor="@color/colorText"
+
+            android:layout_marginLeft="20dp"
+            />
+        <TextView
+            android:text="@string/foto"
+            android:textSize="30sp"
+            android:textColor="@color/colorText"
+
+            android:layout_marginLeft="20dp"/>
+
+    </TableRow>
+    <TableRow
+        android:id="@+id/tabelaRelatorio">
+        <TextView
+            android:id="@+id/relData"
+            android:text="@string/data"
+            android:textSize="30sp"
+            android:textColor="@color/colorPrimaryDark"
+
+            android:layout_marginLeft="20dp"
+            />
+        <TextView
+            android:id="@+id/relValor"
+            android:text="@string/valorRel"
+            android:textSize="30sp"
+            android:textColor="@color/colorPrimaryDark"
+
+            android:layout_marginLeft="20dp"
+            />
+        <TextView
+            android:id="@+id/relFoto"
+            android:text="@string/foto"
+            android:textSize="30sp"
+            android:textColor="@color/colorPrimary"
+
+            android:layout_marginLeft="20dp"/>
+
+        <Button
+            android:id="@+id/alterarBtnRel"
+            android:text="@string/alter"
+            android:textSize="@dimen/buttonSize"
+            android:onClick="onClick"
+            android:textColor="@color/colorLegendas"
+            android:background="@color/colorButtonBack"
+            />
+    </TableRow>
+    <TableLayout
+        android:visibility="invisible"
+        android:id="@+id/editarRel">
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:text="@string/alter"
+                android:textSize="@dimen/textPrimeiro"
+                android:textColor="@color/colorText"
+                />
+        </TableRow>
+        <TableRow>
+
+            <EditText
+                android:id="@+id/dataEdRe"
+                android:onClick="onClick"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+
+                android:text=""
+                android:hint="@string/data"
+                android:textSize="@dimen/textPrimeiro"
+                android:textColor="@color/colorLegendas"
+                android:inputType="numberSigned"
+
+                android:layout_marginLeft="@dimen/fab_margin"
+                android:layout_marginTop="@dimen/fab_margin"
+
+                />
+            <EditText
+                android:id="@+id/valorEdRe"
+                android:onClick="onClick"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+
+                android:text=""
+                android:hint="@string/valorRel"
+                android:textSize="@dimen/textPrimeiro"
+                android:textColor="@color/colorLegendas"
+                android:inputType="numberSigned"
+
+                android:layout_marginLeft="@dimen/fab_margin"
+                android:layout_marginTop="@dimen/fab_margin"
+
+                />
+            <Button
+                android:id="@+id/incluirBtnRel"
+                android:text="@string/incluir"
+                android:textSize="@dimen/buttonSize"
+                android:onClick="onClick"
+                android:textColor="@color/colorLegendas"
+                android:background="@color/colorButtonBack"
+                />
+        </TableRow>
+
+    </TableLayout>
+
+    <android.support.design.widget.FloatingActionButton
+
+        android:id="@+id/voltar"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|end"
+        android:layout_margin="@dimen/fab_margin"
+
+        android:paddingBottom="@dimen/fab_margin"
+
+        app:layout_anchorGravity="bottom|end"
+
+        app:rippleColor="@color/colorText"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+</TableLayout>
